@@ -1,15 +1,20 @@
 {
   "scripts": {
-    "test": "tsc"
+    "build": "tsc",
+    "start": "node ./build/app.js",
+    "inspect": "kill-port --port 9229 && node --inspect==0.0.0.0:9229 build/app.js",
+    "build_watch": "nodemon ./build/app.js --debug --exec 'npm run inspect'"
   },
   "dependencies": {
     "@types/koa": "^2.0.39",
     "@types/lodash": "^4.14.68",
     "@types/node": "^8.0.7",
     "@types/sequelize": "^4.0.62",
+    "kill-port": "^1.0.0",
     "koa": "^2.3.0",
     "lodash": "^4.17.4",
+    "nodemon": "^1.11.0",
     "sequelize": "^4.2.1",
-    "typescript": "^2.4.1"
+    "typescript": "^2.4.2"
   }
 }
