@@ -11,7 +11,7 @@
     "@types/node": "^12.6.3",
     "@types/sequelize": "^4.28.3",
     "koa": "^2.7.0",
-    "lodash": "^4.17.4",
+    "lodash": "4.17.13",
     "nodemon": "^1.11.0",
     "sequelize": "^5.10.1",
     "typescript": "^3.5.3"
