@@ -1,9 +1,10 @@
 import * as Koa from 'koa';
 
-let app = new Koa(); 
+const app = new Koa();
 
-app.use(async ctx => {
+app.use(async (ctx) => {
   ctx.body = 'Hello World!';
-})
+});
 
 app.listen(3000);
+console.log('app run');
