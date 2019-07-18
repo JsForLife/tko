@@ -3,14 +3,16 @@
     "build": "tsc --watch",
     "start": "node ./build/app.js",
     "inspect": "kill-port --port 9229 && node --inspect==0.0.0.0:9229 build/app.js",
-    "build_watch": "nodemon --watch build/ ./build/app.js --debug"
+    "dev": "nodemon --watch build/ ./build/app.js --debug"
   },
   "dependencies": {
+    "@types/joi": "^14.3.3",
     "@types/koa": "^2.0.49",
     "@types/lodash": "^4.14.136",
     "@types/node": "^12.6.3",
     "@types/sequelize": "^4.28.3",
     "koa": "^2.7.0",
+    "koa-joi-router": "^6.0.0",
     "lodash": "4.17.14",
     "nodemon": "^1.11.0",
     "sequelize": "^5.10.1",

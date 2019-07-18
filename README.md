@@ -7,4 +7,4 @@
 #### tslint配置文件规范 https://palantir.github.io/tslint/usage/configuration/
 #### tslint的所有规则 https://palantir.github.io/tslint/rules/
 
-#### 项目启动： num run build_watch
+#### 本地开发调试：num run start
