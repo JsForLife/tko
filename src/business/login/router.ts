@@ -28,7 +28,7 @@ const login_router = router();
 
 login_router.route({
   method: 'get',
-  path: '/login',
+  path: '/demo',
   handler: async (ctx:Koa.Context) => {
     ctx.body = { token: 'dadadaa' };
   },
