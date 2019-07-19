@@ -1,6 +1,9 @@
+import login_router from './business/login/router';
 import * as Koa from 'koa';
 
 const app = new Koa();
+
+app.use(login_router.middleware());
 
 app.use(async (ctx, netx) => {
   const { request } = ctx;

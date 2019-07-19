@@ -9,18 +9,22 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
-    "outDir": "./build/",
+    "outDir": "build",
     "removeComments": false,
     "rootDir": "src",
     "strictNullChecks": true,
-    "target": "es6"
+    "target": "es6",
+    "baseUrl": "src",
   },
-  "types": [ "node" ],
+  "types": [
+    "node"
+  ],
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "node_modules",
-    "build"
+    "build",
+    "Stripes"
   ]
 }
