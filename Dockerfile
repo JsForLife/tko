@@ -13,4 +13,4 @@ EXPOSE 3000
 
 # Entry point
 ENTRYPOINT ["npm", "run"]
-CMD ["test"]
+CMD ["start"]
