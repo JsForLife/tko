@@ -1,0 +1,16 @@
+# 参考资料：https://docs.docker.com/compose/
+version: '2'
+
+volumes:
+  tko: 
+
+services:
+  tko_mysql:
+    image: mysql:5.7
+    volumes: 
+      - tko:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Z843FdhWxHdLUq11LAB3eZnl
+    ports:
+      - "6666:3306"
+    command: [mysqld, --character-set-server=utf8, --collation-server=utf8_bin]
