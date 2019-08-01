@@ -1,4 +1,4 @@
-import sequelize from './database/index';
+import db_manager from './database/index';
 import router from './router';
 import * as Koa from 'koa';
 
@@ -8,7 +8,7 @@ app.use(router.middleware());
 
 app.listen(3000);
 
-sequelize
+db_manager['tko']
   .authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');

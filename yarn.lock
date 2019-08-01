@@ -48,6 +48,10 @@
   dependencies:
     "@types/node" "*"
 
+"@types/bluebird@^3.5.27":
+  version "3.5.27"
+  resolved "https://registry.npm.taobao.org/@types/bluebird/download/@types/bluebird-3.5.27.tgz#61eb4d75dc6bfbce51cf49ee9bbebe941b2cb5d0"
+
 "@types/body-parser@*":
   version "1.17.0"
   resolved "https://registry.npm.taobao.org/@types/body-parser/download/@types/body-parser-1.17.0.tgz#9f5c9d9bd04bb54be32d5eb9fc0d8c974e6cf58c"
@@ -140,6 +144,10 @@
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
+
+"@types/validator@^10.11.2":
+  version "10.11.2"
+  resolved "https://registry.npm.taobao.org/@types/validator/download/@types/validator-10.11.2.tgz#48b60ca2cca927081f37a1ad1de3e25d04abc9f0"
 
 abbrev@1:
   version "1.1.0"
