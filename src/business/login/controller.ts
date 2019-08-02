@@ -1,11 +1,9 @@
 import JoiRouter = require('koa-joi-router');
+import * as service from './service';
 
 const user_login:JoiRouter.JoiMiddleware = async (ctx, next) => {
-  const { user_name, password } = ctx.request.body;
-  if (user_name === 'default' && password === '123456') {
-    ctx.status = 200;
-    return;
-  }
+  const { username, password } = ctx.request.body;
+  await service.check_user_is_existed(username);
   ctx.status = 403;
 };
 
