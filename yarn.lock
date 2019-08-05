@@ -1302,6 +1302,10 @@ minimist@^1.2.0:
   dependencies:
     minimist "0.0.8"
 
+module-alias@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/module-alias/-/module-alias-2.2.1.tgz#553aea9dc7f99cd45fd75e34a574960dc46550da"
+
 moment-timezone@^0.5.21:
   version "0.5.26"
   resolved "https://registry.npm.taobao.org/moment-timezone/download/moment-timezone-0.5.26.tgz#c0267ca09ae84631aa3dc33f65bedbe6e8e0d772"

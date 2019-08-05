@@ -16,9 +16,15 @@
     "target": "es6",
     "baseUrl": "src",
     "paths": {
-      "config": [
-        "config"
-      ]
+      "config/*": [
+        "config/*"
+      ],
+      "database":[
+        "database/*"
+      ],
+      "entities/*": [
+        "database/entities/*",
+      ],
     }
   },
   "types": [

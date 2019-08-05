@@ -4,6 +4,7 @@ import db_connections from 'database/connetions';
 class User extends Model { }
 User.init({
   id: {
+    primaryKey: true,
     type: NUMBER,
   },
   username: {
@@ -23,7 +24,10 @@ User.init({
     type: NUMBER,
   },
   // tslint:disable-next-line:align
-}, { sequelize: db_connections.tko });
+}, {
+    sequelize: db_connections.tko,
+    tableName: 'tbl_user',
+  });
 
 export default User;
 

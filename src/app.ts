@@ -1,3 +1,4 @@
+import 'module-alias/register';
 import router from './router';
 import * as Koa from 'koa';
 
