@@ -27,6 +27,7 @@ User.init({
 }, {
     sequelize: db_connections.tko,
     tableName: 'tbl_user',
+    timestamps: false,
   });
 
 export default User;

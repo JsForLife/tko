@@ -10,7 +10,7 @@ login_router.route({
   path: '/login',
   validate: {
     body: {
-      user_name: Joi.string().min(3).max(20).required(),
+      username: Joi.string().min(3).max(20).required(),
       password: Joi.string().min(6).max(18).required(),
     },
     type: 'json',
