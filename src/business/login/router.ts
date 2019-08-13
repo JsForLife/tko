@@ -1,9 +1,8 @@
 import * as controller from './controller';
 import * as router from 'koa-joi-router';
-import * as Koa from 'koa';
-const Joi = router.Joi;
 
 const login_router = router();
+const Joi = router.Joi;
 
 login_router.route({
   method: 'post',

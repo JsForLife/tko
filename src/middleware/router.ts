@@ -12,9 +12,10 @@ interface RouterBuilder {
 
 // 约束性的路由, business文件夹下每个业务文件夹均有个router文件
 const get_all_routers:GetAllRouters = () => {
-  const folders = fs.readdirSync(`${__dirname}/business`);
+  const business_path = __dirname.replace('middleware', 'business');
+  const folders = fs.readdirSync(business_path);
   return _.map(folders, (folder) => {
-    const router = require(`${__dirname}/business/${folder}/router`);
+    const router = require(`${business_path}/${folder}/router`);
     return router.default;
   });
 };

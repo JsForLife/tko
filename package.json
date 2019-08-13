@@ -27,6 +27,7 @@
   "_moduleAliases": {
     "config": "build/config",
     "database": "build/database",
+    "middleware": "build/middleware",
     "entities": "build/database/entities"
   }
 }

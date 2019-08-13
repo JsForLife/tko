@@ -25,6 +25,9 @@
       "entities/*": [
         "database/entities/*",
       ],
+      "middleware/*": [
+        "middleware/*"
+      ]
     }
   },
   "types": [
