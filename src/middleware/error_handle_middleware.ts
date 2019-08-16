@@ -4,7 +4,7 @@
 */
 import Koa = require('koa');
 
-// 用于捕获中间件产生的同步错误
+// 目的是为了将joi-router, koa和业务报错
 const error_handle:Koa.Middleware = async (ctx, next) => {
   try {
     await next();
