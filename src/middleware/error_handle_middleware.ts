@@ -4,7 +4,7 @@
 */
 import Koa = require('koa');
 
-// 目的是为了将joi-router, koa和业务报错
+// 目的是为了将joi-router, koa框架报错和业务报错
 const error_handle:Koa.Middleware = async (ctx, next) => {
   try {
     await next();

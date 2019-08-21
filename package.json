@@ -2,8 +2,8 @@
   "scripts": {
     "build": "tsc --watch",
     "start": "node ./build/app.js",
-    "inspect": "kill-port --port 9229 && node --inspect==0.0.0.0:9229 build/app.js",
-    "dev": "nodemon --watch build/ ./build/app.js --debug"
+    "inspect": "node --inspect=0.0.0.0:9229 ./build/app.js",
+    "dev": "nodemon --delay 80ms --watch build/ ./build/app.js --exec 'npm run inspect'"
   },
   "dependencies": {
     "@types/bluebird": "^3.5.27",
@@ -26,6 +26,7 @@
   },
   "_moduleAliases": {
     "config": "build/config",
+    "common": "build/common",
     "database": "build/database",
     "middleware": "build/middleware",
     "entities": "build/database/entities"

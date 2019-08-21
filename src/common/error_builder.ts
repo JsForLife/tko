@@ -1,11 +1,11 @@
 import * as _ from 'lodash';
 
-interface ErrorCategory {
+export interface ErrorCategory {
   name:string;
   description:string;
 }
 
-interface Errors {
+export interface Errors {
   [key:string]:{
     status_code:number;
     error_code:number;
@@ -13,7 +13,7 @@ interface Errors {
   };
 }
 
-const error_builder = (category:ErrorCategory, errors:Errors) : { [key in keyof Errors]:Function } => {
+export const error_builder = (category:ErrorCategory, errors:Errors) : { [key in keyof Errors]:Function } => {
   const category_name = category.name;
   const error_collectios = {};
   _.map(errors, (error_content, error_name) => {
@@ -31,5 +31,3 @@ const error_builder = (category:ErrorCategory, errors:Errors) : { [key in keyof 
 
   return error_collectios;
 };
-
-export default error_builder;

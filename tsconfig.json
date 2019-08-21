@@ -27,6 +27,9 @@
       ],
       "middleware/*": [
         "middleware/*"
+      ],
+      "common/*": [
+        "common/*"
       ]
     }
   },
