@@ -1,21 +1,18 @@
 import * as _ from 'lodash';
+import {
+  ErrorCategory,
+  ErrorThrower,
+  Errors,
+} from 'interfaces/error_builder';
 
-export interface ErrorCategory {
-  name:string;
-  description:string;
+export interface Builder<T extends Errors> {
+  (category:ErrorCategory, errors:T) : { [key in keyof T]:ErrorThrower };
 }
 
-export interface Errors {
-  [key:string]:{
-    status_code:number;
-    error_code:number;
-    description?:string;
-  };
-}
-
-export const error_builder = (category:ErrorCategory, errors:Errors) : { [key in keyof Errors]:Function } => {
-  const category_name = category.name;
+const error_builder = <T extends Errors>(category:ErrorCategory, errors:T) : { [key in keyof T]:ErrorThrower } => {
+  const category_name = category.unique_code;
   const error_collectios = {};
+
   _.map(errors, (error_content, error_name) => {
     const { status_code, error_code, description } = error_content;
     _.assign(error_collectios, {
@@ -29,5 +26,7 @@ export const error_builder = (category:ErrorCategory, errors:Errors) : { [key in
     });
   });
 
-  return error_collectios;
+  return error_collectios as any;
 };
+
+export default error_builder;

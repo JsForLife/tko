@@ -3,7 +3,7 @@ import * as service from './service';
 
 const user_login:JoiRouter.JoiMiddleware = async (ctx, next) => {
   const { username, password } = ctx.request.body;
-  await service.check_user_is_existed(username);
+  await service.check_user_is_existed(username, password);
   ctx.status = 403;
 };
 
